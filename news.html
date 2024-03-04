@@ -1,0 +1,485 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    
+<meta property="og:title" content="SJL Partners" />
+<meta property="og:image" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="">
+<link rel="icon" href="">
+<title>News | SJL PARTERS</title>
+<link rel="stylesheet" href="./resources/css/styles.css" /><!-- 서브에서 호출 -->
+<script src="/resources/js/lib/jquery-3.6.0.min.js"></script>
+<!-- plugins -->
+<link rel="stylesheet" href="/resources/plugins/swiper/swiper-bundle.css" />
+<script src="/resources/plugins/swiper/swiper-bundle.min.js"></script>
+<script src="/resources/plugins/popup/jquery.popupoverlay.js"></script>
+
+    
+    
+
+
+    <script src="/js/lib/require.js"></script>
+    <script src="/js/app.js"></script>
+</head>
+<body>
+
+
+
+<!-- skip Navigation(s) -->
+<div id="skipNavigation">
+    <ul>
+        <li>
+            <a href="#contents">Skip to Content</a>
+        </li>
+    </ul>
+</div>
+<!--// skip Navigation(e) -->
+
+<div id="wrapper" >
+<!-- header -->
+    <!-- header Area(s) -->
+    <header id="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="./index.html">
+                    <span>SJL PARTNES</span>
+                </a>
+            </h1>
+            <button type="button" class="btn-menu btn-nav-position" title="Menu" aria-haspopup="true" aria-expanded="false">
+          <span>
+            <i>menu</i>
+          </span>
+            </button>
+            <!-- desktop Menu(s) -->
+            <!--
+              현재 페이지 표기 li에 class="current"를 추가해 주세요.
+            -->
+            <nav id="gnb">
+                <h2 class="blind">Top Menu</h2>
+                <ul class="gnb-menu">
+                    <li ><a href="./firm.html"><span>The Firm</span></a></li>
+                    <li ><a href="./approach.html"><span>Approach</span></a></li>
+                    <li ><a href="./portfolio.html"><span>Portfolio</span></a></li>
+                    <li ><a href="./team.html"><span>Team</span></a></li>
+                    <li class="current"><a href="./news.html"><span>News</span></a></li>
+                    <li ><a href="./contacts.html"><span>Contacts</span></a></li>
+                </ul>
+            </nav>
+            <!--// desktop Menu(e) -->
+        </div>
+    </header>
+    <!--// header Area(e) -->
+
+    <!-- menu Area(s) -->
+    <!--
+      현재 페이지 표기 li에 class="current"를 추가해 주세요.
+    -->
+    <nav id="menu">
+        <h2 class="blind">Menu</h2>
+        <div class="menu-wrap">
+            <ul class="all-menu">
+                <li ><a href="./firm.html"><span>The Firm</span></a></li>
+                <li ><a href="./approach.html"><span>Approach</span></a></li>
+                <li ><a href="./portfolio.html"><span>Portfolio</span></a></li>
+                <li ><a href="./team.html"><span>Team</span></a></li>
+                <li ><a href="./news.html"><span>News</span></a></li>
+                <li ><a href="./contacts.html"><span>Contacts</span></a></li>
+            </ul>
+            <button type="button" class="btn-menuclose btn-nav-position" title="Close">
+                <span>menu Close</span>
+            </button>
+        </div>
+    </nav>
+    <!--// menu Area(e) -->
+<!-- //header -->
+    <script>
+        $(".gnb-menu > li").not(".current").bind("mouseenter", function () {
+            selected = $(".gnb-menu > li.current").index();
+            $(".gnb-menu > li.current").removeClass("current");
+        });
+        $(".gnb-menu > li").mouseleave(function(){
+            if(selected > -1) $(".gnb-menu > li").eq(selected).addClass("current");
+        });
+    </script>
+
+
+
+<script>
+    $(document).ready(function() {
+        var loadIndex =1;
+        $('.news-lang a, .sector.sect-news button').bind("click",function() {
+            //선택된 탭 표시
+            if($(this).find('span').text() != 'LOAD MORE') { //탭 클릭
+                $('.news-lang li').removeClass('current');
+                $(this).parent().addClass('current');
+                loadIndex = 1;
+            }else{ //더보기 클릭
+                loadIndex = loadIndex+1;
+            }
+            var element = $(this);
+            var selected_language = $('.news-lang li.current span').text();
+
+            $.ajax({
+                url: '/newslist.json',
+                contentType: 'application/x-www-form-urlencoded',
+                method: 'post',
+                dataType: 'json',
+                data: {
+                    loadIndex: loadIndex,
+                    language: selected_language.toLowerCase(),
+                },
+                beforeSend: function() {
+                    //util.showLoading(el, 'tiny');
+                },
+                complete: function() {
+                    //util.showLoading(false, 200);
+                },
+                success: function(response) {
+                    var newsHtml='';
+                    $.each(response.data, function(k, v) {
+                        const protocol = 'http';
+                        var link = v.link.includes(protocol)?v.link:protocol+"://"+v.link;
+
+                        var publishDate = new Date(v.publishDate);
+                        var i_d = publishDate.getDate();
+                        var i_m = publishDate.getMonth();
+                        var i_y = publishDate.getFullYear();
+                        monthsStr = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                        var formattedDate = monthsStr[i_m]+' '+i_d.toString().padStart(2, '0')+', '+i_y;
+                        newsHtml += '<li class="">';
+                        newsHtml += '<article class="news">';
+                        newsHtml += '<h5 class="tit">'+v.title+'</h5>';
+                        newsHtml += '<div class="date">'+formattedDate+'</div>';
+                        newsHtml += '<p class="cont">'+v.content+'</p>';
+                        newsHtml += '<a href="'+link+'" target="_blank" class="btn-more">READ MORE</a>';
+                        newsHtml += '</article>';
+                        newsHtml += '</li>';
+                    });
+
+                    if(response.data.length > 8){
+                        $('.sector.sect-news button').css('display','block');
+                    }else $('.sector.sect-news button').css('display','none');
+
+                    if(element.find('span').text() != 'LOAD MORE') {
+                        $('ul.news-list').html(newsHtml);
+                        if(selected_language == 'KOR') $('ul.news-list').addClass('kor-news');
+                        else $('ul.news-list').removeClass('kor-news');
+                    }else{
+                        $('ul.news-list').append(newsHtml);
+                        if(selected_language == 'KOR') $('ul.news-list').addClass('kor-news');
+                        else $('ul.news-list').removeClass('kor-news');
+                    }
+
+                }
+            });
+            return false;
+        });
+    });
+</script>
+
+<!-- contents Area(s) -->
+<main id="contents">
+    <!-- visual Area(s) -->
+    <section class="visual">
+        <div class="visual-wrap">
+            <div class="inner">
+                <h3 class="tit">Newsroom</h3>
+            </div>
+            <div class="bg">
+                <div class="img vis-news"></div>
+            </div>
+            <div class="scr-down"></div>
+        </div>
+    </section>
+    <!--// visual Area(e) -->
+
+    <!-- News List Area(s) -->
+    <section class="sector sect-news">
+        <div class="inner">
+            <h4 class="sect-tit">News Articles</h4>
+            <div class="news-lang tab-menu">
+                <ul class="list" role="tablist">
+                    <li class="current" id="tab01" role="tab" aria-controls="tab-panel01">
+                        <a href="#tab-panel01" class="tab-btn" title="English">
+                            <span>ENG</span>
+                        </a>
+                    </li>
+                    <li id="tab02" role="tab" aria-controls="tab-panel02">
+                        <a href="#tab-panel02" class="tab-btn" title="Korean">
+                            <span>KOR</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <ul class="news-list">
+            
+                
+                <li>
+                    <article class="news">
+                        <h5 class="tit">UK battery startup Nexeon to supply Panasonic with advanced material</h5>
+                        <div class="date">July 25, 2023</div>
+                        <p class="cont">UK battery startup Nexeon will supply high-energy silicon anode material to Panasonic’s, opens new tab newest U.S. plant starting in 2025, the companies said on Monday.</p>
+
+                        
+                        
+                            
+                                
+                            
+                            
+                        
+
+                        <a href="https://www.reuters.com/business/autos-transportation/uk-battery-startup-nexeon-supply-panasonic-with-advanced-material-2023-07-24/" target="_blank" class="btn-more">READ MORE</a>
+                    </article>
+                </li>
+            
+                
+                <li>
+                    <article class="news">
+                        <h5 class="tit">SD Biosensor and SJL Partners Complete Transaction to Acquire Meridian Bioscience</h5>
+                        <div class="date">January 31, 2023</div>
+                        <p class="cont">Meridian Bioscience, Inc., a leading global provider of diagnostic testing solutions and life science raw materials, and SD Biosensor, Inc. and SJL Partners LLC (collectively, the "Consortium"), announced today that they have completed the transaction to acquire Meridian.</p>
+
+                        
+                        
+                            
+                                
+                            
+                            
+                        
+
+                        <a href="https://www.prnewswire.com/news-releases/sd-biosensor-and-sjl-partners-complete-transaction-to-acquire-meridian-bioscience-301735165.html" target="_blank" class="btn-more">READ MORE</a>
+                    </article>
+                </li>
+            
+                
+                <li>
+                    <article class="news">
+                        <h5 class="tit">Meridian Bioscience, Inc. Enters into Agreement to Be Acquired by SD Biosensor and SJL Partners in $1.53 Billion All-Cash Transaction</h5>
+                        <div class="date">July 07, 2022</div>
+                        <p class="cont">Meridian Bioscience, Inc., a leading global provider of diagnostic testing solutions and life science raw materials, and SD Biosensor, Inc. and SJL Partners LLC (collectively, the "Consortium") announced today that they have entered into a definitive merger agreement whereby a newly formed affiliate vehicle of the Consortium will acquire Meridian Bioscience, Inc. in an all-cash transaction valued at approximately $1.53 billion.</p>
+
+                        
+                        
+                            
+                                
+                            
+                            
+                        
+
+                        <a href="https://www.prnewswire.com/news-releases/meridian-bioscience-inc-enters-into-agreement-to-be-acquired-by-sd-biosensor-and-sjl-partners-in-1-53-billion-all-cash-transaction-301582257.html" target="_blank" class="btn-more">READ MORE</a>
+                    </article>
+                </li>
+            
+                
+                <li>
+                    <article class="news">
+                        <h5 class="tit">Momentive Technologies Acquires CoorsTek Crucibles Business</h5>
+                        <div class="date">June 06, 2022</div>
+                        <p class="cont">Momentive Technologies, a global provider of advanced materials technology, headquartered in Cleveland, Ohio, today announced that it signed an agreement to acquire CoorsTek’s crucibles product line.</p>
+
+                        
+                        
+                            
+                                
+                            
+                            
+                        
+
+                        <a href="https://www.coorstek.com/en/news-events/news/momentive-technologies-acquires-coorstek-crucibles-business/" target="_blank" class="btn-more">READ MORE</a>
+                    </article>
+                </li>
+            
+                
+                <li>
+                    <article class="news">
+                        <h5 class="tit">SKC consortium invests $80 million in UK anode startup Nexeon</h5>
+                        <div class="date">January 26, 2022</div>
+                        <p class="cont">A consortium including South Korean chemical company SK Co Ltd (011790.KS) has invested $80 million in British battery materials startup Nexeon to ramp up production of its silicon anodes to meet global demand, the firms said on Wednesday.</p>
+
+                        
+                        
+                            
+                                
+                            
+                            
+                        
+
+                        <a href="https://www.reuters.com/markets/europe/skc-consortium-invests-80-million-uk-anode-startup-nexeon-2022-01-26/" target="_blank" class="btn-more">READ MORE</a>
+                    </article>
+                </li>
+            
+                
+                <li>
+                    <article class="news">
+                        <h5 class="tit">Momentive Performance Materials, Inc. announces acquisition of KCC Corporation's silicones business</h5>
+                        <div class="date">January 06, 2021</div>
+                        <p class="cont">Momentive Performance Materials, Inc. ("Momentive"), announced today it has reached a definitive agreement to acquire KCC Corporation's ("KCC") Silicones business – in Korea and the UK as well as its sales operations in China – further enhancing Momentive's global capabilities in advanced silicones and specialized applications.</p>
+
+                        
+                        
+                            
+                                
+                            
+                            
+                        
+
+                        <a href="https://www.prnewswire.com/news-releases/momentive-performance-materials-inc-announces-acquisition-of-kcc-corporations-silicones-business-further-strengthening-its-global-capabilities-in-advanced-silicones-301202127.html" target="_blank" class="btn-more">READ MORE</a>
+                    </article>
+                </li>
+            
+                
+                <li>
+                    <article class="news">
+                        <h5 class="tit">Wonik QnC embraces Momentive’s quartz operation for $266m</h5>
+                        <div class="date">January 03, 2020</div>
+                        <p class="cont">South Korea’s fabricated quartz maker Wonik QnC said Friday it had completed an acquisition of quartz and ceramics business units owned by New York-based company Momentive Performance Materials for $266 million, in a bid to achieve a vertical integration of its supply chain.</p>
+
+                        
+                        
+                            
+                                
+                            
+                            
+                        
+
+                        <a href="http://www.koreaherald.com/view.php?ud=20200103000524" target="_blank" class="btn-more">READ MORE</a>
+                    </article>
+                </li>
+            
+                
+                <li>
+                    <article class="news">
+                        <h5 class="tit">Investor group consisting of SJL Partners, KCC Corporation and Wonik QnC Corporation completes acquisition of MPM Holdings Inc.</h5>
+                        <div class="date">May 15, 2019</div>
+                        <p class="cont">MPM Holdings Inc., a global silicones and advanced materials company, and SJL Partners LLC, KCC Corporation and Wonik QnC Corporation, today announced that the Investor Group has successfully completed the previously announced acquisition of Momentive.</p>
+
+                        
+                        
+                            
+                                
+                            
+                            
+                        
+
+                        <a href="https://www.businesswire.com/news/home/20190515005804/en/Investor-Group-Consisting-of-SJL-Partners-KCC-Corporation-and-Wonik-QnC-Corporation-Completes-Acquisition-of-MPM-Holdings-Inc." target="_blank" class="btn-more">READ MORE</a>
+                    </article>
+                </li>
+            
+                
+                <li>
+                    <article class="news">
+                        <h5 class="tit">Momentive Performance Materials to be acquired</h5>
+                        <div class="date">September 28, 2018</div>
+                        <p class="cont">The New York-based beauty and personal care ingredient maker announced this week that a collective of South Korean entities will acquire Momentive in a deal valued at just over $3 billion.</p>
+
+                        
+                        
+                            
+                                
+                            
+                            
+                        
+
+                        <a href="https://www.cosmeticsdesign.com/Article/2018/09/17/Momentive-Performance-Materials-to-be-acquired" target="_blank" class="btn-more">READ MORE</a>
+                    </article>
+                </li>
+            
+            </ul>
+            
+            <button type="button" class="btn" >
+                <span>LOAD MORE</span>
+            </button>
+        </div>
+    </section>
+    <!--// News List Area(e) -->
+
+    <!-- Next Page(s) -->
+    <section class="next-page">
+        <a href="/contacts">
+            <h4 class="next-tit">
+                Contacts
+                <div class="arrow"></div>
+            </h4>
+            <div class="bg">
+                <div class="img go-contacts"></div>
+            </div>
+        </a>
+    </section>
+    <!--// Next Page(e) -->
+
+</main>
+<!--// contents Area(e) -->
+
+
+
+
+<!-- footer -->
+<footer id="footer">
+    <div class="inner">
+        <h5 class="logo">
+            <a href="/">
+                <span>SJL PARTNES</span>
+            </a>
+        </h5>
+        <ul class="address">
+            <li>
+                <div class="tit">Phone</div>
+                <div class="info">+070-7938-6856</div>
+            </li>
+            <li>
+                <div class="tit">Fax</div>
+                <div class="info">+82-2-6911-9720</div>
+            </li>
+            <li>
+                <div class="tit">E-mail</div>
+                <div class="info">public@sjlpartners.com</div>
+            </li>
+        </ul>
+        <div class="copyright">@2022 SJL Partners, LLC. All rights reserved.</div>
+        <p class="website-info">
+            The information on this website ("Site") is provided for informational purposes only, and does not constitutes an offer to sell or a solicitation of any offer to buy the securities or services of SJL Partners LLC ("SJL"), any other investment vehicle managed by SJL, or any company in which SJL or its affiliates have invested. The contents of the Site have not been approved by any supervisory authority and no regulatory approvals have been obtained. The information on the Site is not intended to form the basis of any investment decision and may not be used for and does not constitute an offer to sell, or a solicitation of any offer, or an invitation, or a general solicitation to subscribe for or purchase, or to make any commitments for or in respect of interests or to engage in any other transaction. None of the information on the Site shall be construed as investment, legal or tax advice.<br><br>
+            To the maximum extent permitted by law, SJL, its subsidiaries and its affiliates shall not be liable (including in negligence) for any direct, indirect or consequential losses, damages, costs or expenses arising out of or in connection with the use of or reliance on the information on this Site.
+        </p>
+    </div>
+    <!-- top Button(s) -->
+    <button type="button" class="btn-top" style="display: inline-block;">
+        <span>Top</span>
+    </button>
+    <!--// top Button(e) -->
+</footer>
+<!-- //Footer -->
+</div>
+
+
+
+</body>
+<script type="text/javascript" src="/resources/js/common.js"></script>
+<script type="text/javascript" src="/resources/js/gnb.js"></script>
+<script type="text/javascript" src="/resources/js/motion.js"></script>
+<script type="text/javascript" src="/resources/js/slider.js"></script>
+<script type="text/javascript" src="/resources/js/popup.js"></script>
+</html>
+
+
+
+</html>

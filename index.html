@@ -1,0 +1,319 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    
+<meta property="og:title" content="SJL Partners" />
+<meta property="og:image" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="">
+<link rel="icon" href="">
+<title>SJL PARTERS</title>
+<link rel="stylesheet" href="/resources/css/main.css" /><!-- 메인에서만 호출 -->
+<script src="/resources/js/lib/jquery-3.6.0.min.js"></script>
+<!-- plugins -->
+<link rel="stylesheet" href="/resources/plugins/swiper/swiper-bundle.css" />
+<script src="/resources/plugins/swiper/swiper-bundle.min.js"></script>
+<script src="/resources/plugins/popup/jquery.popupoverlay.js"></script>
+    
+    
+    <link rel="stylesheet" href="./resources/css/main.css" /><!-- 메인에서만 호출 -->
+    <script src="/resources/plugins/popup/jquery.popupoverlay.js"></script>
+
+    <script src="/js/lib/require.js"></script>
+    <script src="/js/app.js"></script>
+</head>
+<body>
+
+
+
+<!-- skip Navigation(s) -->
+<div id="skipNavigation">
+    <ul>
+        <li>
+            <a href="#contents">Skip to Content</a>
+        </li>
+    </ul>
+</div>
+<!--// skip Navigation(e) -->
+
+<div id="wrapper" class="main">
+<!-- header -->
+    <!-- header Area(s) -->
+    <header id="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="./index.html">
+                    <span>SJL PARTNES</span>
+                </a>
+            </h1>
+            <button type="button" class="btn-menu btn-nav-position" title="Menu" aria-haspopup="true" aria-expanded="false">
+          <span>
+            <i>menu</i>
+          </span>
+            </button>
+            <!-- desktop Menu(s) -->
+            <!--
+              현재 페이지 표기 li에 class="current"를 추가해 주세요.
+            -->
+            <nav id="gnb">
+                <h2 class="blind">Top Menu</h2>
+                <ul class="gnb-menu">
+                    <li ><a href="./firm.html"><span>The Firm</span></a></li>
+                    <li ><a href="./approach.html"><span>Approach</span></a></li>
+                    <li ><a href="./portfolio.html"><span>Portfolio</span></a></li>
+                    <li ><a href="./team.html"><span>Team</span></a></li>
+                    <li ><a href="./news.html"><span>News</span></a></li>
+                    <li ><a href="./contacts.html"><span>Contacts</span></a></li>
+                </ul>
+            </nav>
+            <!--// desktop Menu(e) -->
+        </div>
+    </header>
+    <!--// header Area(e) -->
+
+    <!-- menu Area(s) -->
+    <!--
+      현재 페이지 표기 li에 class="current"를 추가해 주세요.
+    -->
+    <nav id="menu">
+        <h2 class="blind">Menu</h2>
+        <div class="menu-wrap">
+            <ul class="all-menu">
+                <li ><a href="./firm.html"><span>The Firm</span></a></li>
+                <li ><a href="./approach.html"><span>Approach</span></a></li>
+                <li ><a href="./portfolio.html"><span>Portfolio</span></a></li>
+                <li ><a href="./team.html"><span>Team</span></a></li>
+                <li ><a href="./news.html"><span>News</span></a></li>
+                <li ><a href="./contacts.html"><span>Contacts</span></a></li>
+            </ul>
+            <button type="button" class="btn-menuclose btn-nav-position" title="Close">
+                <span>menu Close</span>
+            </button>
+        </div>
+    </nav>
+    <!--// menu Area(e) -->
+<!-- //header -->
+    <script>
+        $(".gnb-menu > li").not(".current").bind("mouseenter", function () {
+            selected = $(".gnb-menu > li.current").index();
+            $(".gnb-menu > li.current").removeClass("current");
+        });
+        $(".gnb-menu > li").mouseleave(function(){
+            if(selected > -1) $(".gnb-menu > li").eq(selected).addClass("current");
+        });
+    </script>
+
+
+
+<!-- contents Area(s) -->
+<main id="contents">
+    <!-- visual Area(s) -->
+    <section class="visual">
+        <div class="swiper visual-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="inner">
+                        <h3 class="tit">We focus on cross-border investments primarily in North America and Europe together with strategic partners based in Asia</h3>
+                    </div>
+                    <div class="bg">
+                        <div class="img mainvis01"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="inner">
+                        <h3 class="tit">Our approach to investments is guided by our core philosophy of achieving win-win outcomes for all stakeholders</h3>
+                    </div>
+                    <div class="bg">
+                        <div class="img mainvis02"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="inner">
+                        <h3 class="tit">We create value by serving as an enabler to our portfolio companies, focusing on key pivot points that make a difference while balancing financial prudence with smart capital deployment</h3>
+                    </div>
+                    <div class="bg">
+                        <div class="img mainvis03"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="scr-down"></div>
+    </section>
+    <!--// visual Area(e) -->
+
+
+    <!-- card News Area(s) -->
+    <section class="sector main-news">
+        <div class="inner">
+            <ul class="news-list">
+
+                
+                    
+
+                <li>
+                    <article class="news">
+                        <h5 class="tit">UK battery startup Nexeon to supply Panasonic with advanced material</h5>
+                        <div class="date">July 25, 2023</div>
+                        <p class="cont">UK battery startup Nexeon will supply high-energy silicon anode material to Panasonic’s, opens new tab newest U.S. plant starting in 2025, the companies said on Monday.</p>
+
+                        
+                        
+                            
+                                
+                            
+                            
+                        
+
+                        <a href="https://www.reuters.com/business/autos-transportation/uk-battery-startup-nexeon-supply-panasonic-with-advanced-material-2023-07-24/" target="_blank" class="btn-more">READ MORE</a>
+                    </article>
+                </li>
+
+                
+                    
+
+                <li>
+                    <article class="news">
+                        <h5 class="tit">SD Biosensor and SJL Partners Complete Transaction to Acquire Meridian Bioscience</h5>
+                        <div class="date">January 31, 2023</div>
+                        <p class="cont">Meridian Bioscience, Inc., a leading global provider of diagnostic testing solutions and life science raw materials, and SD Biosensor, Inc. and SJL Partners LLC (collectively, the "Consortium"), announced today that they have completed the transaction to acquire Meridian.</p>
+
+                        
+                        
+                            
+                                
+                            
+                            
+                        
+
+                        <a href="https://www.prnewswire.com/news-releases/sd-biosensor-and-sjl-partners-complete-transaction-to-acquire-meridian-bioscience-301735165.html" target="_blank" class="btn-more">READ MORE</a>
+                    </article>
+                </li>
+
+                
+                    
+
+                <li>
+                    <article class="news">
+                        <h5 class="tit">Meridian Bioscience, Inc. Enters into Agreement to Be Acquired by SD Biosensor and SJL Partners in $1.53 Billion All-Cash Transaction</h5>
+                        <div class="date">July 07, 2022</div>
+                        <p class="cont">Meridian Bioscience, Inc., a leading global provider of diagnostic testing solutions and life science raw materials, and SD Biosensor, Inc. and SJL Partners LLC (collectively, the "Consortium") announced today that they have entered into a definitive merger agreement whereby a newly formed affiliate vehicle of the Consortium will acquire Meridian Bioscience, Inc. in an all-cash transaction valued at approximately $1.53 billion.</p>
+
+                        
+                        
+                            
+                                
+                            
+                            
+                        
+
+                        <a href="https://www.prnewswire.com/news-releases/meridian-bioscience-inc-enters-into-agreement-to-be-acquired-by-sd-biosensor-and-sjl-partners-in-1-53-billion-all-cash-transaction-301582257.html" target="_blank" class="btn-more">READ MORE</a>
+                    </article>
+                </li>
+
+                
+
+            </ul>
+            <div class="btn-wrap">
+                <a href="/news" class="btn sa sa-up">
+                    <span>SEE MORE</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--// card News Area(e) -->
+
+    <!-- contents(s) -->
+    <section class="sector sect-ceo">
+        <div class="inner">
+            <div class="in-wrap">
+                <h4 class="greeting">
+                    SJL Partners made it possible for the executive leadership at Momentive to focus on critical but long-overdue strategic initiatives from day one.<br><br>
+                    SJL continues to be an invaluable partner, facilitating communications and actively providing support in their areas of expertise to help unlock all of the exciting opportunities between Momentive and our strategic partner to their fullest potential.
+                </h4>
+                <figure class="fig-ceo">
+                    <img src="/resources/images/photo/img_Samuel_Conzone.jpg" alt="Samuel Conzone">
+                    <figcaption>
+                        <div class="name">Samuel Conzone</div>
+                        <div class="position">
+                            President and Chief Executive Officer<br />
+                            Momentive Performance Materials
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <!--// contents(e) -->
+</main>
+<!--// contents Area(e) -->
+
+
+
+
+<!-- footer -->
+<footer id="footer">
+    <div class="inner">
+        <h5 class="logo">
+            <a href="./index.html">
+                <span>SJL PARTNES</span>
+            </a>
+        </h5>
+        <ul class="address">
+            <li>
+                <div class="tit">Phone</div>
+                <div class="info">+070-7938-6856</div>
+            </li>
+            <li>
+                <div class="tit">Fax</div>
+                <div class="info">+82-2-6911-9720</div>
+            </li>
+            <li>
+                <div class="tit">E-mail</div>
+                <div class="info">public@sjlpartners.com</div>
+            </li>
+        </ul>
+        <div class="copyright">@2022 SJL Partners, LLC. All rights reserved.</div>
+        <p class="website-info">
+            The information on this website ("Site") is provided for informational purposes only, and does not constitutes an offer to sell or a solicitation of any offer to buy the securities or services of SJL Partners LLC ("SJL"), any other investment vehicle managed by SJL, or any company in which SJL or its affiliates have invested. The contents of the Site have not been approved by any supervisory authority and no regulatory approvals have been obtained. The information on the Site is not intended to form the basis of any investment decision and may not be used for and does not constitute an offer to sell, or a solicitation of any offer, or an invitation, or a general solicitation to subscribe for or purchase, or to make any commitments for or in respect of interests or to engage in any other transaction. None of the information on the Site shall be construed as investment, legal or tax advice.<br><br>
+            To the maximum extent permitted by law, SJL, its subsidiaries and its affiliates shall not be liable (including in negligence) for any direct, indirect or consequential losses, damages, costs or expenses arising out of or in connection with the use of or reliance on the information on this Site.
+        </p>
+    </div>
+    <!-- top Button(s) -->
+    <button type="button" class="btn-top" style="display: inline-block;">
+        <span>Top</span>
+    </button>
+    <!--// top Button(e) -->
+</footer>
+<!-- //Footer -->
+</div>
+
+
+
+</body>
+<script type="text/javascript" src="/resources/js/common.js"></script>
+<script type="text/javascript" src="/resources/js/gnb.js"></script>
+<script type="text/javascript" src="/resources/js/motion.js"></script>
+<script type="text/javascript" src="/resources/js/slider.js"></script>
+<script type="text/javascript" src="/resources/js/popup.js"></script>
+</html>
+
+
+
+</html>

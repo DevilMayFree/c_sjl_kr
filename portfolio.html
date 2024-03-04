@@ -1,0 +1,655 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    
+<meta property="og:title" content="SJL Partners" />
+<meta property="og:image" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="">
+<link rel="icon" href="">
+<title>Portfolio | SJL PARTERS</title>
+<link rel="stylesheet" href="./resources/css/styles.css" /><!-- 서브에서 호출 -->
+<script src="/resources/js/lib/jquery-3.6.0.min.js"></script>
+<!-- plugins -->
+<link rel="stylesheet" href="/resources/plugins/swiper/swiper-bundle.css" />
+<script src="/resources/plugins/swiper/swiper-bundle.min.js"></script>
+<script src="/resources/plugins/popup/jquery.popupoverlay.js"></script>
+
+    
+    
+
+
+    <script src="/js/lib/require.js"></script>
+    <script src="/js/app.js"></script>
+</head>
+<body>
+
+
+
+<!-- skip Navigation(s) -->
+<div id="skipNavigation">
+    <ul>
+        <li>
+            <a href="#contents">Skip to Content</a>
+        </li>
+    </ul>
+</div>
+<!--// skip Navigation(e) -->
+
+<div id="wrapper" >
+<!-- header -->
+    <!-- header Area(s) -->
+    <header id="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="./index.html">
+                    <span>SJL PARTNES</span>
+                </a>
+            </h1>
+            <button type="button" class="btn-menu btn-nav-position" title="Menu" aria-haspopup="true" aria-expanded="false">
+          <span>
+            <i>menu</i>
+          </span>
+            </button>
+            <!-- desktop Menu(s) -->
+            <!--
+              현재 페이지 표기 li에 class="current"를 추가해 주세요.
+            -->
+            <nav id="gnb">
+                <h2 class="blind">Top Menu</h2>
+                <ul class="gnb-menu">
+                    <li ><a href="./firm.html"><span>The Firm</span></a></li>
+                    <li ><a href="./approach.html"><span>Approach</span></a></li>
+                    <li class="current"><a href="./portfolio.html"><span>Portfolio</span></a></li>
+                    <li ><a href="./team.html"><span>Team</span></a></li>
+                    <li ><a href="./news.html"><span>News</span></a></li>
+                    <li ><a href="./contacts.html"><span>Contacts</span></a></li>
+                </ul>
+            </nav>
+            <!--// desktop Menu(e) -->
+        </div>
+    </header>
+    <!--// header Area(e) -->
+
+    <!-- menu Area(s) -->
+    <!--
+      현재 페이지 표기 li에 class="current"를 추가해 주세요.
+    -->
+    <nav id="menu">
+        <h2 class="blind">Menu</h2>
+        <div class="menu-wrap">
+            <ul class="all-menu">
+                <li ><a href="./firm.html"><span>The Firm</span></a></li>
+                <li ><a href="./approach.html"><span>Approach</span></a></li>
+                <li ><a href="./portfolio.html"><span>Portfolio</span></a></li>
+                <li ><a href="./team.html"><span>Team</span></a></li>
+                <li ><a href="./news.html"><span>News</span></a></li>
+                <li ><a href="./contacts.html"><span>Contacts</span></a></li>
+            </ul>
+            <button type="button" class="btn-menuclose btn-nav-position" title="Close">
+                <span>menu Close</span>
+            </button>
+        </div>
+    </nav>
+    <!--// menu Area(e) -->
+<!-- //header -->
+    <script>
+        $(".gnb-menu > li").not(".current").bind("mouseenter", function () {
+            selected = $(".gnb-menu > li.current").index();
+            $(".gnb-menu > li.current").removeClass("current");
+        });
+        $(".gnb-menu > li").mouseleave(function(){
+            if(selected > -1) $(".gnb-menu > li").eq(selected).addClass("current");
+        });
+    </script>
+
+
+
+<script>
+    $(document).ready(function() {
+
+    })
+</script>
+<!-- contents Area(s) -->
+<main id="contents">
+    <!-- visual Area(s) -->
+    <section class="visual">
+        <div class="visual-wrap">
+            <div class="inner">
+                <h3 class="tit">Our Investments</h3>
+            </div>
+            <div class="bg">
+                <div class="img vis-portfolio"></div>
+            </div>
+            <div class="scr-down"></div>
+        </div>
+    </section>
+    <!--// visual Area(e) -->
+
+    <!-- Portfolio List Area(s) -->
+    <section class="sector sect-portfolio">
+        <div class="inner hq-inwrap">
+            <h4 class="sect-tit">Portfolio Companies</h4>
+
+        </div>
+        <div class="bg-inwrap">
+            <ul class="portfolio-list">
+                
+                <li>
+                    <div class="company">
+                        <!-- 앞면(s) -->
+                        <div class="front">
+                            <button type="button" class="btn-fcompany" onclick="clickCompany(this);">
+                                <div class="company-logo">
+                                    <img src="/upload/portfolio/e35663e3d6424af18d8da5bb633d312c.png" alt="Meridian Bioscience" />
+                                </div>
+                            </button>
+                        </div>
+                        <!--// 앞면(e) -->
+                        <!-- 뒷면(s) -->
+                        <div class="back">
+                            <div class="back-inner">
+                                <p class="company-text">Fully integrated life science company that develops manufactures, markets, and distributes a broad range of innovative diagnostic and life science products</p>
+                                <ul class="company-info">
+                                    
+                                        <li>
+                                            <div class="cla">Investment date</div>
+                                            <div class="res">2023-11</div>
+                                        </li>
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Sector</div>
+                                            <div class="res">LIFE SCIENCE</div>
+                                        </li>
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Location</div>
+                                            <div class="res">United States</div>
+                                        </li>
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Strategic partners</div>
+                                            <div class="res">SD Biosensor</div>
+                                        </li>
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Status</div>
+                                            <div class="res">Active</div>
+                                        </li>
+                                    
+                                </ul>
+
+                                
+                                    
+                                    
+                                        
+                                        
+                                            
+                                        
+                                    
+                                    <a href="http://www.meridianbioscience.com" target="_blank" class="link-company" style="margin-top: 10px;">
+                                        <span>www.meridianbioscience.com</span>
+                                    </a>
+
+                                
+
+                            </div>
+                            <button type="button" class="btn-close" onclick="clickCompany(this);">Close</button>
+                        </div>
+                        <!--// 뒷면(e) -->
+                    </div>
+                    <div class="company-name">
+                        <div class="sort">LIFE SCIENCE</div>
+                        <div class="tit">Meridian Bioscience</div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="company">
+                        <!-- 앞면(s) -->
+                        <div class="front">
+                            <button type="button" class="btn-fcompany" onclick="clickCompany(this);">
+                                <div class="company-logo">
+                                    <img src="/upload/portfolio/4a0c919779bf451892a54e5b65345f15.png" alt="Nexeon/Ultimus" />
+                                </div>
+                            </button>
+                        </div>
+                        <!--// 앞면(e) -->
+                        <!-- 뒷면(s) -->
+                        <div class="back">
+                            <div class="back-inner">
+                                <p class="company-text">A technology leader in silicon anode materials for the next generation of lithium-ion rechargeable batteries</p>
+                                <ul class="company-info">
+                                    
+                                        <li>
+                                            <div class="cla">Investment date</div>
+                                            <div class="res">2022-01</div>
+                                        </li>
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Sector</div>
+                                            <div class="res">BATTERY</div>
+                                        </li>
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Location</div>
+                                            <div class="res">United Kingdom</div>
+                                        </li>
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Strategic partners</div>
+                                            <div class="res">SKC</div>
+                                        </li>
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Status</div>
+                                            <div class="res">Active</div>
+                                        </li>
+                                    
+                                </ul>
+
+                                
+                                    
+                                    
+                                        
+                                        
+                                            
+                                        
+                                    
+                                    <a href="http://www.nexeon.co.uk" target="_blank" class="link-company" style="margin-top: 10px;">
+                                        <span>www.nexeon.co.uk</span>
+                                    </a>
+
+                                
+
+                            </div>
+                            <button type="button" class="btn-close" onclick="clickCompany(this);">Close</button>
+                        </div>
+                        <!--// 뒷면(e) -->
+                    </div>
+                    <div class="company-name">
+                        <div class="sort">BATTERY</div>
+                        <div class="tit">Nexeon/Ultimus</div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="company">
+                        <!-- 앞면(s) -->
+                        <div class="front">
+                            <button type="button" class="btn-fcompany" onclick="clickCompany(this);">
+                                <div class="company-logo">
+                                    <img src="/upload/portfolio/962a8d074a334be883ad7592c545aeca.jpg" alt="Momentive Performance Materials" />
+                                </div>
+                            </button>
+                        </div>
+                        <!--// 앞면(e) -->
+                        <!-- 뒷면(s) -->
+                        <div class="back">
+                            <div class="back-inner">
+                                <p class="company-text">One of the world’s largest producers of specialty silicones and silicone derivatives</p>
+                                <ul class="company-info">
+                                    
+                                        <li>
+                                            <div class="cla">Investment date</div>
+                                            <div class="res">2019-05</div>
+                                        </li>
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Sector</div>
+                                            <div class="res">CHEMICALS</div>
+                                        </li>
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Location</div>
+                                            <div class="res">United States</div>
+                                        </li>
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Strategic partners</div>
+                                            <div class="res">KCC Corp</div>
+                                        </li>
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Status</div>
+                                            <div class="res">Active</div>
+                                        </li>
+                                    
+                                </ul>
+
+                                
+                                    
+                                    
+                                        
+                                        
+                                            
+                                        
+                                    
+                                    <a href="http://www.momentive.com" target="_blank" class="link-company" style="margin-top: 10px;">
+                                        <span>www.momentive.com</span>
+                                    </a>
+
+                                
+
+                            </div>
+                            <button type="button" class="btn-close" onclick="clickCompany(this);">Close</button>
+                        </div>
+                        <!--// 뒷면(e) -->
+                    </div>
+                    <div class="company-name">
+                        <div class="sort">CHEMICALS</div>
+                        <div class="tit">Momentive Performance Materials</div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="company">
+                        <!-- 앞면(s) -->
+                        <div class="front">
+                            <button type="button" class="btn-fcompany" onclick="clickCompany(this);">
+                                <div class="company-logo">
+                                    <img src="/upload/portfolio/025c28ee1eae4974a1dc48c874b97d19.jpg" alt="Momentive Technologies" />
+                                </div>
+                            </button>
+                        </div>
+                        <!--// 앞면(e) -->
+                        <!-- 뒷면(s) -->
+                        <div class="back">
+                            <div class="back-inner">
+                                <p class="company-text">A world leader in fused quartz and ceramic solutions</p>
+                                <ul class="company-info">
+                                    
+                                        <li>
+                                            <div class="cla">Investment date</div>
+                                            <div class="res">2019-05</div>
+                                        </li>
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Sector</div>
+                                            <div class="res">CHEMICALS</div>
+                                        </li>
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Location</div>
+                                            <div class="res">United States</div>
+                                        </li>
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Strategic partners</div>
+                                            <div class="res">Wonik QnC</div>
+                                        </li>
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Status</div>
+                                            <div class="res">Active</div>
+                                        </li>
+                                    
+                                </ul>
+
+                                
+                                    
+                                    
+                                        
+                                        
+                                            
+                                        
+                                    
+                                    <a href="http://www.momentivetech.com" target="_blank" class="link-company" style="margin-top: 10px;">
+                                        <span>www.momentivetech.com</span>
+                                    </a>
+
+                                
+
+                            </div>
+                            <button type="button" class="btn-close" onclick="clickCompany(this);">Close</button>
+                        </div>
+                        <!--// 뒷면(e) -->
+                    </div>
+                    <div class="company-name">
+                        <div class="sort">CHEMICALS</div>
+                        <div class="tit">Momentive Technologies</div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="company">
+                        <!-- 앞면(s) -->
+                        <div class="front">
+                            <button type="button" class="btn-fcompany" onclick="clickCompany(this);">
+                                <div class="company-logo">
+                                    <img src="/upload/portfolio/85aa362475eb4b76a315ac93e830c123.jpg" alt="Vigevano" />
+                                </div>
+                            </button>
+                        </div>
+                        <!--// 앞면(e) -->
+                        <!-- 뒷면(s) -->
+                        <div class="back">
+                            <div class="back-inner">
+                                <p class="company-text">One of the leading distributors of fashion brands and leather goods in Korea</p>
+                                <ul class="company-info">
+                                    
+                                        <li>
+                                            <div class="cla">Investment date</div>
+                                            <div class="res">2018-06</div>
+                                        </li>
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Sector</div>
+                                            <div class="res">FASHION</div>
+                                        </li>
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Location</div>
+                                            <div class="res">Korea</div>
+                                        </li>
+                                    
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Status</div>
+                                            <div class="res">Exited</div>
+                                        </li>
+                                    
+                                </ul>
+
+                                
+                                    
+                                    
+                                        
+                                        
+                                            
+                                        
+                                    
+                                    <a href="http://www.vigevano.com" target="_blank" class="link-company" style="margin-top: 10px;">
+                                        <span>www.vigevano.com</span>
+                                    </a>
+
+                                
+
+                            </div>
+                            <button type="button" class="btn-close" onclick="clickCompany(this);">Close</button>
+                        </div>
+                        <!--// 뒷면(e) -->
+                    </div>
+                    <div class="company-name">
+                        <div class="sort">FASHION</div>
+                        <div class="tit">Vigevano</div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="company">
+                        <!-- 앞면(s) -->
+                        <div class="front">
+                            <button type="button" class="btn-fcompany" onclick="clickCompany(this);">
+                                <div class="company-logo">
+                                    <img src="/upload/portfolio/5276c0752bfb49e98d68a306994fcee0.jpg" alt="Celltrion Holdings" />
+                                </div>
+                            </button>
+                        </div>
+                        <!--// 앞면(e) -->
+                        <!-- 뒷면(s) -->
+                        <div class="back">
+                            <div class="back-inner">
+                                <p class="company-text">Korea’s leading biopharmaceutical company, specializing in the R&D and manufacture of biosimilars and innovative drugs</p>
+                                <ul class="company-info">
+                                    
+                                        <li>
+                                            <div class="cla">Investment date</div>
+                                            <div class="res">2018-03</div>
+                                        </li>
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Sector</div>
+                                            <div class="res">HEALTHCARE</div>
+                                        </li>
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Location</div>
+                                            <div class="res">Korea</div>
+                                        </li>
+                                    
+                                    
+                                    
+                                        <li>
+                                            <div class="cla">Status</div>
+                                            <div class="res">Exited</div>
+                                        </li>
+                                    
+                                </ul>
+
+                                
+                                    
+                                    
+                                        
+                                            
+                                        
+                                        
+                                    
+                                    <a href="https://www.celltrion.com" target="_blank" class="link-company" style="margin-top: 10px;">
+                                        <span>https://www.celltrion.com</span>
+                                    </a>
+
+                                
+
+                            </div>
+                            <button type="button" class="btn-close" onclick="clickCompany(this);">Close</button>
+                        </div>
+                        <!--// 뒷면(e) -->
+                    </div>
+                    <div class="company-name">
+                        <div class="sort">HEALTHCARE</div>
+                        <div class="tit">Celltrion Holdings</div>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </section>
+    <!--// Portfolio List Area(e) -->
+
+    <!-- Next Page(s) -->
+    <section class="next-page">
+        <a href="/team">
+            <h4 class="next-tit">
+                Team
+                <div class="arrow"></div>
+            </h4>
+            <div class="bg">
+                <div class="img go-team"></div>
+            </div>
+        </a>
+    </section>
+    <!--// Next Page(e) -->
+
+</main>
+<!--// contents Area(e) -->
+
+
+
+<!-- footer -->
+<footer id="footer">
+    <div class="inner">
+        <h5 class="logo">
+            <a href="/">
+                <span>SJL PARTNES</span>
+            </a>
+        </h5>
+        <ul class="address">
+            <li>
+                <div class="tit">Phone</div>
+                <div class="info">+070-7938-6856</div>
+            </li>
+            <li>
+                <div class="tit">Fax</div>
+                <div class="info">+82-2-6911-9720</div>
+            </li>
+            <li>
+                <div class="tit">E-mail</div>
+                <div class="info">public@sjlpartners.com</div>
+            </li>
+        </ul>
+        <div class="copyright">@2022 SJL Partners, LLC. All rights reserved.</div>
+        <p class="website-info">
+            The information on this website ("Site") is provided for informational purposes only, and does not constitutes an offer to sell or a solicitation of any offer to buy the securities or services of SJL Partners LLC ("SJL"), any other investment vehicle managed by SJL, or any company in which SJL or its affiliates have invested. The contents of the Site have not been approved by any supervisory authority and no regulatory approvals have been obtained. The information on the Site is not intended to form the basis of any investment decision and may not be used for and does not constitute an offer to sell, or a solicitation of any offer, or an invitation, or a general solicitation to subscribe for or purchase, or to make any commitments for or in respect of interests or to engage in any other transaction. None of the information on the Site shall be construed as investment, legal or tax advice.<br><br>
+            To the maximum extent permitted by law, SJL, its subsidiaries and its affiliates shall not be liable (including in negligence) for any direct, indirect or consequential losses, damages, costs or expenses arising out of or in connection with the use of or reliance on the information on this Site.
+        </p>
+    </div>
+    <!-- top Button(s) -->
+    <button type="button" class="btn-top" style="display: inline-block;">
+        <span>Top</span>
+    </button>
+    <!--// top Button(e) -->
+</footer>
+<!-- //Footer -->
+</div>
+
+
+
+</body>
+<script type="text/javascript" src="/resources/js/common.js"></script>
+<script type="text/javascript" src="/resources/js/gnb.js"></script>
+<script type="text/javascript" src="/resources/js/motion.js"></script>
+<script type="text/javascript" src="/resources/js/slider.js"></script>
+<script type="text/javascript" src="/resources/js/popup.js"></script>
+</html>
+
+
+
+</html>

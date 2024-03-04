@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+    <path style="fill:none;opacity:.2" d="M0 0h10v10H0z"/>
+    <path data-name="사각형 1" transform="translate(4)" style="fill:#fff" d="M0 0h6v1H0z"/>
+    <path data-name="사각형 2" transform="translate(9)" style="fill:#fff" d="M0 0h1v6H0z"/>
+    <path data-name="/" transform="rotate(-45 11.207 4.62)" style="fill:#fff" d="M0 0h13v1H0z"/>
+</svg>

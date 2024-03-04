@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <g transform="translate(-1389 -1825)">
+        <circle cx="12" cy="12" r="12" transform="translate(1389 1825)" style="fill:#111"/>
+        <path data-name="사각형 118" transform="translate(1394 1832)" style="fill:#fff" d="M0 0h14v10H0z"/>
+        <path data-name="패스 85" d="m20782-7606-6 5" transform="translate(-19382 9443)" style="fill:none;stroke:#111"/>
+        <path data-name="패스 86" d="m20776-7606 6 5" transform="translate(-19374 9443)" style="fill:none;stroke:#111"/>
+        <path data-name="패스 87" d="m1394 1832 7 6 7-6" style="stroke-linejoin:round;fill:none;stroke:#111"/>
+    </g>
+</svg>

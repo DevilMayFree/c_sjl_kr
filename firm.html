@@ -1,0 +1,367 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    
+<meta property="og:title" content="SJL Partners" />
+<meta property="og:image" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="">
+<link rel="icon" href="">
+<title>Firm | SJL PARTERS</title>
+<link rel="stylesheet" href="./resources/css/styles.css" /><!-- 서브에서 호출 -->
+<script src="/resources/js/lib/jquery-3.6.0.min.js"></script>
+<!-- plugins -->
+<link rel="stylesheet" href="/resources/plugins/swiper/swiper-bundle.css" />
+<script src="/resources/plugins/swiper/swiper-bundle.min.js"></script>
+<script src="/resources/plugins/popup/jquery.popupoverlay.js"></script>
+
+    
+    
+
+
+    <script src="/js/lib/require.js"></script>
+    <script src="/js/app.js"></script>
+</head>
+<body>
+
+
+
+<!-- skip Navigation(s) -->
+<div id="skipNavigation">
+    <ul>
+        <li>
+            <a href="#contents">Skip to Content</a>
+        </li>
+    </ul>
+</div>
+<!--// skip Navigation(e) -->
+
+<div id="wrapper" >
+<!-- header -->
+    <!-- header Area(s) -->
+    <header id="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="./index.html">
+                    <span>SJL PARTNES</span>
+                </a>
+            </h1>
+            <button type="button" class="btn-menu btn-nav-position" title="Menu" aria-haspopup="true" aria-expanded="false">
+          <span>
+            <i>menu</i>
+          </span>
+            </button>
+            <!-- desktop Menu(s) -->
+            <!--
+              현재 페이지 표기 li에 class="current"를 추가해 주세요.
+            -->
+            <nav id="gnb">
+                <h2 class="blind">Top Menu</h2>
+                <ul class="gnb-menu">
+                    <li class="current"><a href="./firm.html"><span>The Firm</span></a></li>
+                    <li ><a href="./approach.html"><span>Approach</span></a></li>
+                    <li ><a href="./portfolio.html"><span>Portfolio</span></a></li>
+                    <li ><a href="./team.html"><span>Team</span></a></li>
+                    <li ><a href="./news.html"><span>News</span></a></li>
+                    <li ><a href="./contacts.html"><span>Contacts</span></a></li>
+                </ul>
+            </nav>
+            <!--// desktop Menu(e) -->
+        </div>
+    </header>
+    <!--// header Area(e) -->
+
+    <!-- menu Area(s) -->
+    <!--
+      현재 페이지 표기 li에 class="current"를 추가해 주세요.
+    -->
+    <nav id="menu">
+        <h2 class="blind">Menu</h2>
+        <div class="menu-wrap">
+            <ul class="all-menu">
+                <li ><a href="./firm.html"><span>The Firm</span></a></li>
+                <li ><a href="./approach.html"><span>Approach</span></a></li>
+                <li ><a href="./portfolio.html"><span>Portfolio</span></a></li>
+                <li ><a href="./team.html"><span>Team</span></a></li>
+                <li ><a href="./news.html"><span>News</span></a></li>
+                <li ><a href="./contacts.html"><span>Contacts</span></a></li>
+            </ul>
+            <button type="button" class="btn-menuclose btn-nav-position" title="Close">
+                <span>menu Close</span>
+            </button>
+        </div>
+    </nav>
+    <!--// menu Area(e) -->
+<!-- //header -->
+    <script>
+        $(".gnb-menu > li").not(".current").bind("mouseenter", function () {
+            selected = $(".gnb-menu > li.current").index();
+            $(".gnb-menu > li.current").removeClass("current");
+        });
+        $(".gnb-menu > li").mouseleave(function(){
+            if(selected > -1) $(".gnb-menu > li").eq(selected).addClass("current");
+        });
+    </script>
+
+
+
+<script>
+    $(document).ready(function() {
+
+    });
+</script>
+
+<!-- contents Area(s) -->
+<main id="contents">
+    <!-- visual Area(s) -->
+    <section class="visual">
+        <div class="visual-wrap">
+            <div class="inner">
+                <h3 class="tit">Our Firm</h3>
+            </div>
+            <div class="bg">
+                <div class="img vis-firm"></div>
+            </div>
+            <div class="scr-down"></div>
+        </div>
+    </section>
+    <!--// visual Area(e) -->
+
+    <!-- About Area(s) -->
+    <section class="sector">
+        <div class="inner02">
+            <div class="about-wrap">
+                <h4 class="sect-tit">
+                    About<br />
+                    SJL Partners
+                </h4>
+                <div class="about-text">
+                    SJL Partners is a private equity investment manager based in Seoul, Korea. The company was founded in 2017, seeking to create an investment platform focusing on outbound cross-border opportunities out of Korea and the Asia-Pacific.<br />
+                    <br />
+                    We deliver a unique investment proposition to our investors by partnering with strategic parties to leverage the "best of both worlds". We combine SJL’s expertise in cross-border M&amp;A execution, operational improvements, and governance with the ability of the strategic partner to bring compelling synergies and mitigate risks.
+
+                </div>
+            </div>
+            <figure class="about-fig">
+                <img src="/resources/images/firm/about_mobile.jpg" alt="" class="img-mobile" />
+                <img src="/resources/images/firm/about_desktop.jpg" alt="" class="img-desk" />
+            </figure>
+        </div>
+    </section>
+    <!--// About Area(e) -->
+
+    <!-- History Area(s) -->
+    <section class="sector sect-history bg-black">
+        <h4 class="sect-tit">History</h4>
+        <div class="swiper history-swiper">
+            <div class="swiper-wrapper">
+
+            
+                
+                
+                
+                
+                <div class="swiper-slide">
+                    <div class="item">
+                        <h5 class="year">2023</h5>
+                        <dl class="month">
+                            <dt>November</dt>
+                            <dd><p>SJL completes US$1.55 billion joint acquisition of Meridian Bioscience with SD Biosensor</p></dd>
+                        </dl>
+                    </div>
+                </div>
+            
+                
+                
+                
+                
+                <div class="swiper-slide">
+                    <div class="item">
+                        <h5 class="year">2022</h5>
+                        <dl class="month">
+                            <dt>January</dt>
+                            <dd><p>SJL completes joint investment in Nexeon and NSC with SKC<br></p></dd>
+                        </dl>
+                    </div>
+                </div>
+            
+                
+                
+                
+                
+                <div class="swiper-slide">
+                    <div class="item">
+                        <h5 class="year">2019</h5>
+                        <dl class="month">
+                            <dt>May</dt>
+                            <dd><p>SJL completes US$3.1 billion joint acquisition of Momentive Performance Materials with KCC Corporation and Wonik QnC Corporation<br></p></dd>
+                        </dl>
+                    </div>
+                </div>
+            
+                
+                
+                
+                
+                <div class="swiper-slide">
+                    <div class="item">
+                        <h5 class="year">2018</h5>
+                        <dl class="month">
+                            <dt>June</dt>
+                            <dd>SJL completes US$100 million investment into Vigevano</dd>
+                        </dl>
+                    </div>
+                </div>
+            
+                
+                
+                
+                
+                <div class="swiper-slide">
+                    <div class="item">
+                        <h5 class="year">2018</h5>
+                        <dl class="month">
+                            <dt>March</dt>
+                            <dd>SJL completes US$187 million investment into Celltrion Holdings</dd>
+                        </dl>
+                    </div>
+                </div>
+            
+                
+                
+                
+                
+                <div class="swiper-slide">
+                    <div class="item">
+                        <h5 class="year">2017</h5>
+                        <dl class="month">
+                            <dt>November</dt>
+                            <dd><p>SJL Partners founded<br></p></dd>
+                        </dl>
+                    </div>
+                </div>
+            
+
+            </div>
+            <div class="history-pagination">
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="swiper-buttons">
+                <button type="button" class="swiper-arrow-prev swp-btn" title="Prev">
+                    <span class="ico_arr"></span>
+                </button>
+                <button type="button" class="swiper-arrow-next swp-btn" title="Next">
+                    <span class="ico_arr"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!--// History Area(e) -->
+
+    <!-- Chairman Area(s) -->
+    <section class="sector sect-ceo sect-wwd">
+        <div class="inner">
+            <h4 class="sect-tit">What We Do</h4>
+            <div class="in-wrap">
+                <div class="greeting">
+                    We believe there are substantial value creation opportunities in cross-border M&amp;As in OECD markets.<br /><br />
+                    By investing together with strategic investors in Asia, we can make synergies more tangible and investment risks more controllable.<br /><br />
+                    Our strength lies in finding such opportunities and realizing value from them.
+                </div>
+                <figure class="fig-ceo">
+                    <img src="/resources/images/photo/SJL-769.jpg" alt="Steve Lim">
+                    <figcaption>
+                        <div class="name">Steve Suk Jung Lim</div>
+                        <div class="position">Chairman and Managing Partner</div>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <!--// Chairman Area(e) -->
+
+    <!-- Next Page(s) -->
+    <section class="next-page">
+        <a href="./approach.html">
+            <h4 class="next-tit">
+                Approach
+                <div class="arrow"></div>
+            </h4>
+            <div class="bg">
+                <div class="img go-approach"></div>
+            </div>
+        </a>
+    </section>
+    <!--// Next Page(e) -->
+
+</main>
+<!--// contents Area(e) -->
+
+
+
+<!-- footer -->
+<footer id="footer">
+    <div class="inner">
+        <h5 class="logo">
+            <a href="/">
+                <span>SJL PARTNES</span>
+            </a>
+        </h5>
+        <ul class="address">
+            <li>
+                <div class="tit">Phone</div>
+                <div class="info">+070-7938-6856</div>
+            </li>
+            <li>
+                <div class="tit">Fax</div>
+                <div class="info">+82-2-6911-9720</div>
+            </li>
+            <li>
+                <div class="tit">E-mail</div>
+                <div class="info">public@sjlpartners.com</div>
+            </li>
+        </ul>
+        <div class="copyright">@2022 SJL Partners, LLC. All rights reserved.</div>
+        <p class="website-info">
+            The information on this website ("Site") is provided for informational purposes only, and does not constitutes an offer to sell or a solicitation of any offer to buy the securities or services of SJL Partners LLC ("SJL"), any other investment vehicle managed by SJL, or any company in which SJL or its affiliates have invested. The contents of the Site have not been approved by any supervisory authority and no regulatory approvals have been obtained. The information on the Site is not intended to form the basis of any investment decision and may not be used for and does not constitute an offer to sell, or a solicitation of any offer, or an invitation, or a general solicitation to subscribe for or purchase, or to make any commitments for or in respect of interests or to engage in any other transaction. None of the information on the Site shall be construed as investment, legal or tax advice.<br><br>
+            To the maximum extent permitted by law, SJL, its subsidiaries and its affiliates shall not be liable (including in negligence) for any direct, indirect or consequential losses, damages, costs or expenses arising out of or in connection with the use of or reliance on the information on this Site.
+        </p>
+    </div>
+    <!-- top Button(s) -->
+    <button type="button" class="btn-top" style="display: inline-block;">
+        <span>Top</span>
+    </button>
+    <!--// top Button(e) -->
+</footer>
+<!-- //Footer -->
+</div>
+
+
+
+</body>
+<script type="text/javascript" src="/resources/js/common.js"></script>
+<script type="text/javascript" src="/resources/js/gnb.js"></script>
+<script type="text/javascript" src="/resources/js/motion.js"></script>
+<script type="text/javascript" src="/resources/js/slider.js"></script>
+<script type="text/javascript" src="/resources/js/popup.js"></script>
+</html>
+
+
+
+</html>

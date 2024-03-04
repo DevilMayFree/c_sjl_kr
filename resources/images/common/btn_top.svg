@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+    <g data-name="#ico_top">
+        <g style="stroke:#111;fill:#fff">
+            <circle cx="22.5" cy="22.5" r="22.5" style="stroke:none"/>
+            <circle cx="22.5" cy="22.5" r="22" style="fill:none"/>
+        </g>
+        <path data-name="base" transform="rotate(-90 26.5 11.5)" style="opacity:.2;fill:none" d="M0 0h30v15H0z"/>
+        <path data-name="패스 12" d="m461 1455 7 7-7 7" transform="rotate(-90 -481.25 958.25)" style="fill:none;stroke:#111"/>
+        <path data-name="사각형 20" transform="rotate(-90 30 8)" style="fill:#111" d="M0 0h29v1H0z"/>
+    </g>
+</svg>

@@ -1,0 +1,707 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    
+<meta property="og:title" content="SJL Partners" />
+<meta property="og:image" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="">
+<link rel="icon" href="">
+<title>Team | SJL PARTERS</title>
+<link rel="stylesheet" href="./resources/css/styles.css" /><!-- 서브에서 호출 -->
+<script src="/resources/js/lib/jquery-3.6.0.min.js"></script>
+<!-- plugins -->
+<link rel="stylesheet" href="/resources/plugins/swiper/swiper-bundle.css" />
+<script src="/resources/plugins/swiper/swiper-bundle.min.js"></script>
+<script src="/resources/plugins/popup/jquery.popupoverlay.js"></script>
+
+    
+    
+
+
+    <script src="/js/lib/require.js"></script>
+    <script src="/js/app.js"></script>
+</head>
+<body>
+
+
+
+<!-- skip Navigation(s) -->
+<div id="skipNavigation">
+    <ul>
+        <li>
+            <a href="#contents">Skip to Content</a>
+        </li>
+    </ul>
+</div>
+<!--// skip Navigation(e) -->
+
+<div id="wrapper" >
+<!-- header -->
+    <!-- header Area(s) -->
+    <header id="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="./index.html">
+                    <span>SJL PARTNES</span>
+                </a>
+            </h1>
+            <button type="button" class="btn-menu btn-nav-position" title="Menu" aria-haspopup="true" aria-expanded="false">
+          <span>
+            <i>menu</i>
+          </span>
+            </button>
+            <!-- desktop Menu(s) -->
+            <!--
+              현재 페이지 표기 li에 class="current"를 추가해 주세요.
+            -->
+            <nav id="gnb">
+                <h2 class="blind">Top Menu</h2>
+                <ul class="gnb-menu">
+                    <li ><a href="./firm.html"><span>The Firm</span></a></li>
+                    <li ><a href="./approach.html"><span>Approach</span></a></li>
+                    <li ><a href="./portfolio.html"><span>Portfolio</span></a></li>
+                    <li class="current"><a href="./team.html"><span>Team</span></a></li>
+                    <li ><a href="./news.html"><span>News</span></a></li>
+                    <li ><a href="./contacts.html"><span>Contacts</span></a></li>
+                </ul>
+            </nav>
+            <!--// desktop Menu(e) -->
+        </div>
+    </header>
+    <!--// header Area(e) -->
+
+    <!-- menu Area(s) -->
+    <!--
+      현재 페이지 표기 li에 class="current"를 추가해 주세요.
+    -->
+    <nav id="menu">
+        <h2 class="blind">Menu</h2>
+        <div class="menu-wrap">
+            <ul class="all-menu">
+                <li ><a href="./firm.html"><span>The Firm</span></a></li>
+                <li ><a href="./approach.html"><span>Approach</span></a></li>
+                <li ><a href="./portfolio.html"><span>Portfolio</span></a></li>
+                <li ><a href="./team.html"><span>Team</span></a></li>
+                <li ><a href="./news.html"><span>News</span></a></li>
+                <li ><a href="./contacts.html"><span>Contacts</span></a></li>
+            </ul>
+            <button type="button" class="btn-menuclose btn-nav-position" title="Close">
+                <span>menu Close</span>
+            </button>
+        </div>
+    </nav>
+    <!--// menu Area(e) -->
+<!-- //header -->
+    <script>
+        $(".gnb-menu > li").not(".current").bind("mouseenter", function () {
+            selected = $(".gnb-menu > li.current").index();
+            $(".gnb-menu > li.current").removeClass("current");
+        });
+        $(".gnb-menu > li").mouseleave(function(){
+            if(selected > -1) $(".gnb-menu > li").eq(selected).addClass("current");
+        });
+    </script>
+
+
+<script>
+    $(document).ready(function() {
+        $('.team-mem').bind("click",function(){
+            var thisImg = $(this).find('.img img.photo').attr("src");
+            var thisName = $(this).find('.name span').text();
+            var thisRank = $(this).find('.rank span').text();
+            var thisContent = $(this).find('.content').html();
+            var NextIdx = $(this).parent().next().find('.team-mem').data('idx');
+            var PrevIdx = $(this).parent().prev().find('.team-mem').data('idx');
+            $('#popupMember .img img').attr('src', thisImg);
+            $('#popupMember .img img').attr('alt', thisName);
+            $('#popupMember .name').text(thisName);
+            $('#popupMember .rank').text(thisRank);
+            $('#popupMember .member-info').html(thisContent);
+            $('#popupMember').data('next-idx',NextIdx);
+            $('#popupMember').data('prev-idx',PrevIdx);
+        });
+
+       $('.btn-controls.next').bind("click",function() {
+           $('.team-mem[data-idx="'+$('#popupMember').data('next-idx')+'"]').click();
+       });
+
+       $('.btn-controls.prev').bind("click",function() {
+           $('.team-mem[data-idx="'+$('#popupMember').data('prev-idx')+'"]').click();
+       });
+    });
+</script>
+
+    <!-- contents Area(s) -->
+    <main id="contents">
+        <!-- visual Area(s) -->
+        <section class="visual">
+            <div class="visual-wrap">
+                <div class="inner">
+                    <h3 class="tit">Our People</h3>
+                </div>
+                <div class="bg">
+                    <div class="img vis-team"></div>
+                </div>
+                <div class="scr-down"></div>
+            </div>
+        </section>
+        <!--// visual Area(e) -->
+
+        <!-- Investment Team Area(s) -->
+        <section class="sector sect-team">
+            <div class="inner">
+                <h4 class="sect-tit">
+                    <div class="num">01</div>
+                    <div>Investment Team</div>
+                </h4>
+                <p class="sect-txt">Based in Seoul, Korea, SJL’s investment team consists of fit-for-purpose professionals experienced in executing and managing cross-border investments.</p>
+            </div>
+            <div class="swiper team-swiper tyA">
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide">
+                        <div class="team-mem" data-idx="4">
+                            <a href="javascript:void(0);" class="popupMember_open">
+                                <figure>
+                                    <div class="img">
+									<img src="../../resources/images/photo/photo_transparent_thumb.png" alt="">
+                                    
+                                        
+                                        
+                                            <img src="/upload/product/28f11f8cbaa24238b6b032a35cb59b0f.jpg" alt="Steve Suk Jung Lim" class="photo">
+                                        
+                                    
+                                        <span class="img-more"></span>
+                                    </div>
+                                    <figcaption>
+                                        <h5 class="name">
+                                            <span>Steve Suk Jung Lim</span>
+                                        </h5>
+                                        <div class="rank">
+                                            <span>Chairman and Managing Partner</span>
+                                        </div>
+                                        <div class="content" style="display: none;">
+                                            <p>Mr. Lim serves as Chairman and Managing Partner at the firm. As chair of the Investment Committee and the Operating Committee, he leads the shaping of the firm’s strategy and oversees the origination of new investment opportunities, portfolio management, and investor relations.</p><p><br></p><p>Prior to founding SJL, Mr. Lim led CVC Capital Partners in Korea as chairman and partner, also serving as a member of its Investment Committee, Asia Executive Committee and Asia Board. Before CVC, Mr. Lim served as CEO of J.P. Morgan Korea and Head of Korea Investment Banking for over 20 years. Mr. Lim also worked at Salomon Brothers in New York, Tokyo and Seoul; Kidder Peabody &amp; Co. in New York; and Procter &amp; Gamble in Cincinnati.</p><p><br></p><p>Mr. Lim currently serves as a director on the boards of Momentive Technologies and Nexeon Ltd.</p><p><br></p><p>Mr. Lim holds an Executive MBA (APC) from New York University, an MBA from George Washington University, and a BA in Economics from Korea University.</p>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="team-mem" data-idx="5">
+                            <a href="javascript:void(0);" class="popupMember_open">
+                                <figure>
+                                    <div class="img">
+									<img src="../../resources/images/photo/photo_transparent_thumb.png" alt="">
+                                    
+                                        
+                                        
+                                            <img src="/upload/product/8b1cc479a5704f61b1e52c766f9b1488.jpg" alt="Woosung Jung" class="photo">
+                                        
+                                    
+                                        <span class="img-more"></span>
+                                    </div>
+                                    <figcaption>
+                                        <h5 class="name">
+                                            <span>Woosung Jung</span>
+                                        </h5>
+                                        <div class="rank">
+                                            <span>Managing Director</span>
+                                        </div>
+                                        <div class="content" style="display: none;">
+                                            <p>Mr. Jung is primarily responsible for the origination and execution of investment opportunities, and managing portfolio companies. He is a member of the firm’s Operating Committee.</p><p><br></p><p>Prior to joining SJL, Mr. Jung was a director at Credit Suisse in Korea, and an executive director at J.P. Morgan in Hong Kong with a focus on the energy sector across power, oil &amp; gas, metals &amp; mining and infrastructure. He also previously worked at Oliver Wyman as a management consultant, leading various corporate restructuring and growth strategy projects.</p><p><br></p><p>Mr. Jung holds an MBA from the Kellogg School of Management at Northwestern University, and a BBA from Yonsei University.</p><p><br></p>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="team-mem" data-idx="6">
+                            <a href="javascript:void(0);" class="popupMember_open">
+                                <figure>
+                                    <div class="img">
+									<img src="../../resources/images/photo/photo_transparent_thumb.png" alt="">
+                                    
+                                        
+                                        
+                                            <img src="/upload/product/b22f028aba014d1fbe11fce455d8cbfb.jpg" alt="Sungjae Lee" class="photo">
+                                        
+                                    
+                                        <span class="img-more"></span>
+                                    </div>
+                                    <figcaption>
+                                        <h5 class="name">
+                                            <span>Sungjae Lee</span>
+                                        </h5>
+                                        <div class="rank">
+                                            <span>Managing Director</span>
+                                        </div>
+                                        <div class="content" style="display: none;">
+                                            <p>Mr. Lee is primarily responsible for the origination and execution of investment opportunities, and managing portfolio companies. He is a member of the firm’s Operating Committee.</p><p><br></p><p>Prior to joining SJL, Mr. Lee served as VP of Business Development at Fullerton Financial Holdings, a subsidiary of Temasek focused on strategic investments in financial institutions in Asia. Before Fullerton, Mr. Lee spent 11 years at J.P. Morgan specializing in M&amp;A for industry and coverage teams in Singapore, Hong Kong and Seoul.</p><p><br></p><p>Mr. Lee holds an MBA (High Honors) from the University of Chicago Booth School of Business, and a BA in Political Science from Johns Hopkins University.</p>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="team-mem" data-idx="26">
+                            <a href="javascript:void(0);" class="popupMember_open">
+                                <figure>
+                                    <div class="img">
+									<img src="../../resources/images/photo/photo_transparent_thumb.png" alt="">
+                                    
+                                        
+                                        
+                                            <img src="/upload/product/d059211d6e55475e91cfb1c555437392.jpg" alt="JP Park" class="photo">
+                                        
+                                    
+                                        <span class="img-more"></span>
+                                    </div>
+                                    <figcaption>
+                                        <h5 class="name">
+                                            <span>JP Park</span>
+                                        </h5>
+                                        <div class="rank">
+                                            <span>Executive Director</span>
+                                        </div>
+                                        <div class="content" style="display: none;">
+                                            <p>Mr. Park is primarily engaged in the execution of investment opportunities and managing portfolio companies.</p><p><br></p><p>Prior to joining SJL, Mr. Park was a vice president at J.P. Morgan in Seoul, supporting deal origination and leading the execution of M&amp;A and international capital markets transactions. He also previously worked at Anchor Equity Partners, where he evaluated investment opportunities in Korea and the Asia-Pacific.</p><p><br></p><p>Mr. Park holds a BSc in Management from the London School of Economics.</p>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="team-mem" data-idx="41">
+                            <a href="javascript:void(0);" class="popupMember_open">
+                                <figure>
+                                    <div class="img">
+									<img src="../../resources/images/photo/photo_transparent_thumb.png" alt="">
+                                    
+                                        
+                                        
+                                            <img src="/upload/product/fc28cd86fb8440ee81fa20e1f249967e.jpg" alt="Jiun Im" class="photo">
+                                        
+                                    
+                                        <span class="img-more"></span>
+                                    </div>
+                                    <figcaption>
+                                        <h5 class="name">
+                                            <span>Jiun Im</span>
+                                        </h5>
+                                        <div class="rank">
+                                            <span>Associate</span>
+                                        </div>
+                                        <div class="content" style="display: none;">
+                                            <p>Mr. Im joined SJL in 2023, and is engaged in evaluating investment opportunities, supporting deal execution and portfolio management.</p><p><br></p><p>Prior to joining SJL, Mr. Im was an equity research analyst at Goldman Sachs, owning primary coverage of the consumer and retail sectors in Korea. He also previously worked in the research departments of Nomura (covering consumer/biopharmaceuticals) and Daiwa (automobile, steelmaking and shipbuilding).</p><p><br></p><p>Mr. Im holds a BSc in Mathematics &amp; Statistical Science from University College London.</p>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="team-mem" data-idx="27">
+                            <a href="javascript:void(0);" class="popupMember_open">
+                                <figure>
+                                    <div class="img">
+									<img src="../../resources/images/photo/photo_transparent_thumb.png" alt="">
+                                    
+                                        
+                                        
+                                            <img src="/upload/product/e7284ce1bedb4d1ba61837c438afe111.jpg" alt="Kyumin Kang" class="photo">
+                                        
+                                    
+                                        <span class="img-more"></span>
+                                    </div>
+                                    <figcaption>
+                                        <h5 class="name">
+                                            <span>Kyumin Kang</span>
+                                        </h5>
+                                        <div class="rank">
+                                            <span>Associate</span>
+                                        </div>
+                                        <div class="content" style="display: none;">
+                                            <p>Mr. Kang joined SJL in 2019, and is engaged in evaluating investment opportunities, supporting deal execution and portfolio management.</p><p><br></p><p>Prior to joining SJL, Mr. Kang worked in the Leveraged Finance Group at BNP Paribas in New York, executing financing transactions involving the structuring and syndication of leveraged loans and high-yield bonds.</p><p><br></p><p>Mr. Kang holds a BSc in Policy Analysis and Management from Cornell University.</p><p><br></p>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="team-mem" data-idx="29">
+                            <a href="javascript:void(0);" class="popupMember_open">
+                                <figure>
+                                    <div class="img">
+									<img src="../../resources/images/photo/photo_transparent_thumb.png" alt="">
+                                    
+                                        
+                                        
+                                            <img src="/upload/product/d7c35a417a6a4c57978b8930f7f3bf4e.jpg" alt="Eun-su Park" class="photo">
+                                        
+                                    
+                                        <span class="img-more"></span>
+                                    </div>
+                                    <figcaption>
+                                        <h5 class="name">
+                                            <span>Eun-su Park</span>
+                                        </h5>
+                                        <div class="rank">
+                                            <span>Analyst</span>
+                                        </div>
+                                        <div class="content" style="display: none;">
+                                            <p>Mr. Park joined SJL in 2021, and is engaged in evaluating investment opportunities, supporting deal execution and portfolio management.</p><p><br></p><p>Mr. Park holds a BBA from Korea University.&nbsp;</p><p><br></p>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="swiper-buttons">
+                    <button type="button" class="swiper-arrow-prev swp-btn" title="Prev">
+                        <span class="ico_arr"></span>
+                    </button>
+                    <button type="button" class="swiper-arrow-next swp-btn" title="Next">
+                        <span class="ico_arr"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!--// Investment Team Area(e) -->
+
+        <!-- Advisory Group Area(s) -->
+        <section class="sector sect-team bg-gray">
+            <div class="inner">
+                <h4 class="sect-tit">
+                    <div class="num">02</div>
+                    <div>Operating Advisory Group</div>
+                </h4>
+                <p class="sect-txt">Based in Chicago and New York, SJL’s operating partners bring decades of operational and investment experience, having held a wide range of senior positions at global private equity funds and multinational corporations.</p>
+            </div>
+            <div class="swiper team-swiper tyB">
+                <div class="swiper-wrapper">
+
+                    
+                    <div class="swiper-slide">
+                        <div class="team-mem" data-idx="30">
+                            <a href="javascript:void(0);" class="popupMember_open">
+                                <figure>
+                                    <div class="img">
+									<img src="../../resources/images/photo/photo_transparent_thumb.png" alt="">
+                                    
+                                        
+                                        
+                                            <img src="/upload/product/4ff7837c0265444480ad03a9c75f4e1a.jpg" alt="Thomas J. Kichler" class="photo">
+                                        
+                                    
+                                        <span class="img-more"></span>
+                                    </div>
+                                    <figcaption>
+                                        <h5 class="name">
+                                            <span>Thomas J. Kichler</span>
+                                        </h5>
+                                        <div class="rank">
+                                            <span>Operating Partner</span>
+                                        </div>
+                                        <div class="content" style="display: none;">
+                                           <div>Mr. Kichler has more than 35 years of experience in private equity and investment banking. He is currently a senior advisor at CVC Capital Partners, after serving as partner and head of US Industrials and Energy.</div><div><br></div><div>Prior to CVC, Mr. Kichler was a managing director and partner at One Equity Partners, and a managing director at Citi and its predecessor Salomon Brothers. He also previously worked at Wasserstein Perella and Ernst &amp; Young.</div><div><br></div><div>Mr. Kichler currently serves as chairman of the board of Anchor Glass Container Corporation, and as a director on the board of Momentive Performance Materials. He previous served on the boards of numerous private and public companies, including Progress Rail Services (Caterpillar), Columbian Chemicals (Birla Carbon), PeroxyChem (Evonik) and Western Hospitals (Apollo Hospitals).</div><div><br></div><div>Mr. Kichler holds a BSE in Banking, Finance, Securities Law and Corporate from the Wharton School at the University of Pennsylvania.</div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="team-mem" data-idx="31">
+                            <a href="javascript:void(0);" class="popupMember_open">
+                                <figure>
+                                    <div class="img">
+									<img src="../../resources/images/photo/photo_transparent_thumb.png" alt="">
+                                    
+                                        
+                                        
+                                            <img src="/upload/product/90ef9e06f7094b699da528db24315987.jpg" alt="Allen Han" class="photo">
+                                        
+                                    
+                                        <span class="img-more"></span>
+                                    </div>
+                                    <figcaption>
+                                        <h5 class="name">
+                                            <span>Allen Han</span>
+                                        </h5>
+                                        <div class="rank">
+                                            <span>Operating Partner</span>
+                                        </div>
+                                        <div class="content" style="display: none;">
+                                           <p>Mr. Han has over 30 years of experience working as an operational or business leader in private equity and multinational corporations.</p><p><br></p><p>Mr. Han was previously a partner and head of the Asia Operations Team at CVC Capital Partners, where he supported all of CVC’s industrial investments in the region. Before CVC, Mr. Han ran Honeywell’s Electronic Sensing business globally and its Security business in Asia as vice president and general manager. He also previously worked at General Electric in the US and China, Booz Allen &amp; Hamilton and Hewlett-Packard.&nbsp;</p><p><br></p><p>Mr. Han currently serves as a director on the boards of Momentive Performance Materials and Momentive Technologies.&nbsp;</p><p><br></p><p>Mr. Han holds an MBA from the University of Chicago Graduate School of Business, and a BS from National Taiwan University.</p><p><br></p><div><br></div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="swiper-buttons">
+                    <button type="button" class="swiper-arrow-prev swp-btn" title="Prev">
+                        <span class="ico_arr"></span>
+                    </button>
+                    <button type="button" class="swiper-arrow-next swp-btn" title="Next">
+                        <span class="ico_arr"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!--// Advisory Group Area(e) -->
+
+        <!-- Finance and Operations Team Area(s) -->
+        <section class="sector sect-team">
+            <div class="inner">
+                <h4 class="sect-tit">
+                    <div class="num">03</div>
+                    <div>Finance and Operations Team</div>
+                </h4>
+                <p class="sect-txt">Based in Seoul, Korea, SJL’s finance and operations professionals manage fund accounting and financial reporting functions for the firm’s investors, as well as compliance and HR standards and practices.</p>
+            </div>
+            <div class="swiper team-swiper tyC">
+                <div class="swiper-wrapper">
+
+                    
+                    <div class="swiper-slide">
+                        <div class="team-mem" data-idx="32">
+                            <a href="javascript:void(0);" class="popupMember_open">
+                                <figure>
+                                    <div class="img">
+									<img src="../../resources/images/photo/photo_transparent_thumb.png" alt="">
+                                    
+                                        
+                                        
+                                            <img src="/upload/product/c73f011bbf67424ab00fe2bc53d93ed1.jpg" alt="Anna Kyuhee Kim" class="photo">
+                                        
+                                    
+                                        <span class="img-more"></span>
+                                    </div>
+                                    <figcaption>
+                                        <h5 class="name">
+                                            <span>Anna Kyuhee Kim</span>
+                                        </h5>
+                                        <div class="rank">
+                                            <span>CFO & COO</span>
+                                        </div>
+                                        <div class="content" style="display: none;">
+                                           <p>Ms. Kim has a broad range of leadership responsibilities across fund controllership, investor relations, compliance and office administration. She is a member of the firm’s Operating Committee.</p><p><br></p><p>Prior to joining SJL, Ms. Kim was the CFO and CAO at J.P. Morgan Investment Advisors Korea, also serving as a business manager exploring new business areas. Prior to these roles, she was the CFO of J.P. Morgan Asset Management Korea. Before J.P. Morgan, she worked as a CPA at PricewaterhouseCoopers in Seoul and Boston.</p><p><br></p><p>Ms. Kim holds a BA in English Language and Literature from Ewha Womans University.&nbsp;</p><p><br></p>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="team-mem" data-idx="37">
+                            <a href="javascript:void(0);" class="popupMember_open">
+                                <figure>
+                                    <div class="img">
+									<img src="../../resources/images/photo/photo_transparent_thumb.png" alt="">
+                                    
+                                        
+                                        
+                                            <img src="/upload/product/821e3a5e2ef146c49bda35422e989afd.jpg" alt="Jeongsun Lim" class="photo">
+                                        
+                                    
+                                        <span class="img-more"></span>
+                                    </div>
+                                    <figcaption>
+                                        <h5 class="name">
+                                            <span>Jeongsun Lim</span>
+                                        </h5>
+                                        <div class="rank">
+                                            <span>Fund Administrator</span>
+                                        </div>
+                                        <div class="content" style="display: none;">
+                                           <p>Ms. Lim is primarily responsible for investor relations, and managing fund administration affairs including accounting and financial reporting for the firm's funds.</p><p><br></p><p>Prior to joining SJL, Ms. Lim was a fund administrator at JC Partners, a private equity investment manager based in Korea.&nbsp;</p><p><br></p><p>Ms. Lim holds a MA in International Office Administration from Ewha Womans University.</p>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="team-mem" data-idx="35">
+                            <a href="javascript:void(0);" class="popupMember_open">
+                                <figure>
+                                    <div class="img">
+									<img src="../../resources/images/photo/photo_transparent_thumb.png" alt="">
+                                    
+                                        
+                                        
+                                            <img src="/upload/product/3e2c2237fa8e40a3b8ea7d3479dc8830.jpg" alt="Jaehee Seo" class="photo">
+                                        
+                                    
+                                        <span class="img-more"></span>
+                                    </div>
+                                    <figcaption>
+                                        <h5 class="name">
+                                            <span>Jaehee Seo</span>
+                                        </h5>
+                                        <div class="rank">
+                                            <span>Administrator</span>
+                                        </div>
+                                        <div class="content" style="display: none;">
+                                           <p>Ms. Seo is primarily responsible for providing administrative support across all of SJL's finance and operations affairs.</p><p><br></p><p>Ms. Seo holds a BA in International Office Administration from Ewha Womans University.</p>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                <div class="swiper-buttons">
+                    <button type="button" class="swiper-arrow-prev swp-btn" title="Prev">
+                        <span class="ico_arr"></span>
+                    </button>
+                    <button type="button" class="swiper-arrow-next swp-btn" title="Next">
+                        <span class="ico_arr"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!--// Finance and Operations Team Area(e) -->
+
+        <!-- Next Page(s) -->
+        <section class="next-page">
+            <a href="/news">
+                <h4 class="next-tit">
+                    News
+                    <div class="arrow"></div>
+                </h4>
+                <div class="bg">
+                    <div class="img go-news"></div>
+                </div>
+            </a>
+        </section>
+        <!--// Next Page(e) -->
+
+    </main>
+    <!--// contents Area(e) -->
+
+
+
+<!-- footer -->
+<footer id="footer">
+    <div class="inner">
+        <h5 class="logo">
+            <a href="/">
+                <span>SJL PARTNES</span>
+            </a>
+        </h5>
+        <ul class="address">
+            <li>
+                <div class="tit">Phone</div>
+                <div class="info">+070-7938-6856</div>
+            </li>
+            <li>
+                <div class="tit">Fax</div>
+                <div class="info">+82-2-6911-9720</div>
+            </li>
+            <li>
+                <div class="tit">E-mail</div>
+                <div class="info">public@sjlpartners.com</div>
+            </li>
+        </ul>
+        <div class="copyright">@2022 SJL Partners, LLC. All rights reserved.</div>
+        <p class="website-info">
+            The information on this website ("Site") is provided for informational purposes only, and does not constitutes an offer to sell or a solicitation of any offer to buy the securities or services of SJL Partners LLC ("SJL"), any other investment vehicle managed by SJL, or any company in which SJL or its affiliates have invested. The contents of the Site have not been approved by any supervisory authority and no regulatory approvals have been obtained. The information on the Site is not intended to form the basis of any investment decision and may not be used for and does not constitute an offer to sell, or a solicitation of any offer, or an invitation, or a general solicitation to subscribe for or purchase, or to make any commitments for or in respect of interests or to engage in any other transaction. None of the information on the Site shall be construed as investment, legal or tax advice.<br><br>
+            To the maximum extent permitted by law, SJL, its subsidiaries and its affiliates shall not be liable (including in negligence) for any direct, indirect or consequential losses, damages, costs or expenses arising out of or in connection with the use of or reliance on the information on this Site.
+        </p>
+    </div>
+    <!-- top Button(s) -->
+    <button type="button" class="btn-top" style="display: inline-block;">
+        <span>Top</span>
+    </button>
+    <!--// top Button(e) -->
+</footer>
+<!-- //Footer -->
+</div>
+
+
+<!-- Layer popup(s) -->
+<section class="popup poptype" id="popupMember">
+    <div class="pop-team">
+        <div class="img">
+            <img src="/resources/images/photo/no_profile.png" alt="no profile">
+        </div>
+        <div class="team-right">
+            <div class="member">
+                <h4 class="name"></h4>
+                <div class="rank"></div>
+            </div>
+            <div class="meminfo-scroll">
+                <div class="swiper info-scroll">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <p class="member-info"></p>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="list-controls">
+            <button type="button" class="btn-controls prev"><span>PREV</span></button>
+            <button type="button" class="btn-controls next"><span>NEXT</span></button>
+            <button type="button" class="btn-list popupMember_close"><span>BACK TO LIST</span></button>
+        </div>
+    </div>
+    <button type="button" class="pop_close popupMember_close" title="Close">
+        <span></span>
+    </button>
+</section>
+<!--// Layer popup(e) -->
+
+
+</body>
+<script type="text/javascript" src="/resources/js/common.js"></script>
+<script type="text/javascript" src="/resources/js/gnb.js"></script>
+<script type="text/javascript" src="/resources/js/motion.js"></script>
+<script type="text/javascript" src="/resources/js/slider.js"></script>
+<script type="text/javascript" src="/resources/js/popup.js"></script>
+</html>
+
+
+
+</html>
