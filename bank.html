@@ -23,7 +23,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="">
 <link rel="icon" href="">
-<title>Portfolio | SJL PARTERS</title>
+<title>Bank | SJL PARTERS</title>
 <link rel="stylesheet" href="./resources/css/styles.css" /><!-- 서브에서 호출 -->
 <script src="/resources/js/lib/jquery-3.6.0.min.js"></script>
 <!-- plugins -->
@@ -76,10 +76,10 @@
                 <ul class="gnb-menu">
                     <li ><a href="./firm.html"><span>The Firm</span></a></li>
                     <li ><a href="./approach.html"><span>Approach</span></a></li>
-                    <li class="current"><a href="./portfolio.html"><span>Portfolio</span></a></li>
+                    <li ><a href="./portfolio.html"><span>Portfolio</span></a></li>
                     <li ><a href="./team.html"><span>Team</span></a></li>
                     <li ><a href="./news.html"><span>News</span></a></li>
-                    <li ><a href="./bank.html"><span>Bank</span></a></li>
+                    <li class="current"><a href="./bank.html"><span>Bank</span></a></li>
                     <li ><a href="./contacts.html"><span>Contacts</span></a></li>
                 </ul>
             </nav>
@@ -101,7 +101,7 @@
                 <li ><a href="./portfolio.html"><span>Portfolio</span></a></li>
                 <li ><a href="./team.html"><span>Team</span></a></li>
                 <li ><a href="./news.html"><span>News</span></a></li>
-                    <li ><a href="./bank.html"><span>Bank</span></a></li>
+                <li ><a href="./bank.html"><span>Bank</span></a></li>
                 <li ><a href="./contacts.html"><span>Contacts</span></a></li>
             </ul>
             <button type="button" class="btn-menuclose btn-nav-position" title="Close">
@@ -134,10 +134,10 @@
     <section class="visual">
         <div class="visual-wrap">
             <div class="inner">
-                <h3 class="tit">Our Investments</h3>
+                <h3 class="tit">Our Partner Banks</h3>
             </div>
             <div class="bg">
-                <div class="img vis-portfolio"></div>
+                <div class="img vis-team"></div>
             </div>
             <div class="scr-down"></div>
         </div>
@@ -147,20 +147,21 @@
     <!-- Portfolio List Area(s) -->
     <section class="sector sect-portfolio">
         <div class="inner hq-inwrap">
-            <h4 class="sect-tit">Portfolio Companies</h4>
-
+            <h4 class="sect-tit">Partner Banks</h4>
         </div>
         <div class="bg-inwrap">
             <ul class="portfolio-list">
                 
                 <li>
-                    <div class="company">
+                    <div class="company company-my">
                         <!-- 앞면(s) -->
                         <div class="front">
-                            <button type="button" class="btn-fcompany" onclick="clickCompany(this);">
-                                <div class="company-logo">
-                                    <img src="/upload/portfolio/e35663e3d6424af18d8da5bb633d312c.png" alt="Meridian Bioscience" />
+                            <button type="button" class="btn-fcompany">
+                            <a href="https://obank.kbstar.com/quics?page=ochn" target="_blank">
+                                <div class="company-logo-my">
+                                    <img src="/resources/images/yh/1_kb.png" alt="Meridian Bioscience" />
                                 </div>
+                            </a>
                             </button>
                         </div>
                         <!--// 앞면(e) -->
@@ -221,19 +222,22 @@
                         <!--// 뒷면(e) -->
                     </div>
                     <div class="company-name">
-                        <div class="sort">LIFE SCIENCE</div>
-                        <div class="tit">Meridian Bioscience</div>
+                        <!--<div class="sort">LIFE SCIENCE</div>-->
+                        <div class="tit">KB Kookmin Bank</div>
                     </div>
                 </li>
                 
                 <li>
-                    <div class="company">
+                    <div class="company company-my">
                         <!-- 앞면(s) -->
                         <div class="front">
-                            <button type="button" class="btn-fcompany" onclick="clickCompany(this);">
-                                <div class="company-logo">
-                                    <img src="/upload/portfolio/4a0c919779bf451892a54e5b65345f15.png" alt="Nexeon/Ultimus" />
-                                </div>
+                            <!--<button type="button" class="btn-fcompany" onclick="clickCompany(this);">-->
+                            <button type="button" class="btn-fcompany" >
+                                <a href="https://www.wooribank.com/" target="_blank">
+                                    <div class="company-logo-my">
+                                        <img src="/resources/images/yh/2_yl.jpg" alt="Nexeon/Ultimus" />
+                                    </div>
+                                </a>
                             </button>
                         </div>
                         <!--// 앞면(e) -->
@@ -294,19 +298,21 @@
                         <!--// 뒷면(e) -->
                     </div>
                     <div class="company-name">
-                        <div class="sort">BATTERY</div>
-                        <div class="tit">Nexeon/Ultimus</div>
+                        <!--<div class="sort">BATTERY</div>-->
+                        <div class="tit">Our bank</div>
                     </div>
                 </li>
                 
                 <li>
-                    <div class="company">
+                    <div class="company company-my">
                         <!-- 앞면(s) -->
                         <div class="front">
-                            <button type="button" class="btn-fcompany" onclick="clickCompany(this);">
-                                <div class="company-logo">
-                                    <img src="/upload/portfolio/962a8d074a334be883ad7592c545aeca.jpg" alt="Momentive Performance Materials" />
-                                </div>
+                            <button type="button" class="btn-fcompany">
+                                <a href="https://www.shinhan.com/" target="_blank">
+                                    <div class="company-logo-my">
+                                        <img src="/resources/images/yh/3_xh.png" alt="Momentive Performance Materials" />
+                                    </div>
+                                </a>
                             </button>
                         </div>
                         <!--// 앞면(e) -->
@@ -367,19 +373,21 @@
                         <!--// 뒷면(e) -->
                     </div>
                     <div class="company-name">
-                        <div class="sort">CHEMICALS</div>
-                        <div class="tit">Momentive Performance Materials</div>
+                        <!--<div class="sort">CHEMICALS</div>-->
+                        <div class="tit">Shinhan Bank</div>
                     </div>
                 </li>
                 
                 <li>
-                    <div class="company">
+                    <div class="company company-my">
                         <!-- 앞면(s) -->
                         <div class="front">
-                            <button type="button" class="btn-fcompany" onclick="clickCompany(this);">
-                                <div class="company-logo">
-                                    <img src="/upload/portfolio/025c28ee1eae4974a1dc48c874b97d19.jpg" alt="Momentive Technologies" />
-                                </div>
+                            <button type="button" class="btn-fcompany">
+                                <a href="https://www.keb.co.kr/" target="_blank">
+                                    <div class="company-logo-my">
+                                        <img src="/resources/images/yh/4_hy.jpg" alt="Momentive Technologies" />
+                                    </div>
+                                </a>
                             </button>
                         </div>
                         <!--// 앞면(e) -->
@@ -440,19 +448,21 @@
                         <!--// 뒷면(e) -->
                     </div>
                     <div class="company-name">
-                        <div class="sort">CHEMICALS</div>
-                        <div class="tit">Momentive Technologies</div>
+                        <!--<div class="sort">CHEMICALS</div>-->
+                        <div class="tit">Hana Bank</div>
                     </div>
                 </li>
                 
                 <li>
-                    <div class="company">
+                    <div class="company company-my">
                         <!-- 앞면(s) -->
                         <div class="front">
-                            <button type="button" class="btn-fcompany" onclick="clickCompany(this);">
-                                <div class="company-logo">
-                                    <img src="/upload/portfolio/85aa362475eb4b76a315ac93e830c123.jpg" alt="Vigevano" />
-                                </div>
+                            <button type="button" class="btn-fcompany">
+                                <a href="https://www.bok.or.kr/" target="_blank">
+                                    <div class="company-logo-my">
+                                        <img src="/resources/images/yh/5_hg.png" alt="Vigevano" />
+                                    </div>
+                                </a>
                             </button>
                         </div>
                         <!--// 앞면(e) -->
@@ -508,19 +518,21 @@
                         <!--// 뒷면(e) -->
                     </div>
                     <div class="company-name">
-                        <div class="sort">FASHION</div>
-                        <div class="tit">Vigevano</div>
+                        <!--<div class="sort">FASHION</div>-->
+                        <div class="tit">Bank of Korea</div>
                     </div>
                 </li>
                 
                 <li>
-                    <div class="company">
+                    <div class="company company-my">
                         <!-- 앞면(s) -->
                         <div class="front">
-                            <button type="button" class="btn-fcompany" onclick="clickCompany(this);">
-                                <div class="company-logo">
-                                    <img src="/upload/portfolio/5276c0752bfb49e98d68a306994fcee0.jpg" alt="Celltrion Holdings" />
-                                </div>
+                            <button type="button" class="btn-fcompany">
+                                <a href="https://www.ibk.co.kr/" target="_blank">
+                                    <div class="company-logo-my">
+                                        <img src="/resources/images/yh/6_gy.gif" alt="Celltrion Holdings" />
+                                    </div>
+                                </a>
                             </button>
                         </div>
                         <!--// 앞면(e) -->
@@ -576,11 +588,182 @@
                         <!--// 뒷면(e) -->
                     </div>
                     <div class="company-name">
-                        <div class="sort">HEALTHCARE</div>
-                        <div class="tit">Celltrion Holdings</div>
+                        <!--<div class="sort">HEALTHCARE</div>-->
+                        <div class="tit">IBK Industrial Bank</div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="company company-my">
+                        <!-- 앞면(s) -->
+                        <div class="front">
+                            <button type="button" class="btn-fcompany">
+                                <a href="https://www.bnkfg.com/main/main.jsp" target="_blank">
+                                    <div class="company-logo-my">
+                                        <img src="/resources/images/yh/7_bnk.jpg" alt="Momentive Technologies" />
+                                    </div>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="company-name">
+                        <div class="tit">BNK Financial Group</div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="company company-my">
+                        <!-- 앞면(s) -->
+                        <div class="front">
+                            <button type="button" class="btn-fcompany">
+                                <a href="https://www.kakaobank.com/" target="_blank">
+                                    <div class="company-logo-my">
+                                        <img src="/resources/images/yh/8_kakao.png" alt="Vigevano" />
+                                    </div>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="company-name">
+                        <div class="tit">Kakao Bank</div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="company company-my">
+                        <!-- 앞면(s) -->
+                        <div class="front">
+                            <button type="button" class="btn-fcompany">
+                                <a href="https://www.kdb.co.kr/index.jsp" target="_blank">
+                                    <div class="company-logo-my">
+                                        <img src="/resources/images/yh/9_kdb.png" alt="Celltrion Holdings" />
+                                    </div>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="company-name">
+                        <div class="tit">Korea Development Bank</div>
                     </div>
                 </li>
                 
+            </ul>
+        </div>
+
+        <div class="inner hq-inwrap">
+            <h4 class="sect-tit" style="margin-top: 50px;">joint production company</h4>
+        </div>
+        <div class="bg-inwrap">
+            <ul class="portfolio-list">
+
+                <li>
+                    <div class="company company-my">
+                        <!-- 앞면(s) -->
+                        <div class="front">
+                            <button type="button" class="btn-fcompany">
+                                <a href="https://www.samsungpop.com" target="_blank">
+                                    <div class="company-logo-my">
+                                        <img src="/resources/images/yh/zq1.png" alt="Meridian Bioscience" />
+                                    </div>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="company-name">
+                        <div class="tit">Samsung Securities</div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="company company-my">
+                        <!-- 앞면(s) -->
+                        <div class="front">
+                            <button type="button" class="btn-fcompany" >
+                                <a href="https://www.daishin.com" target="_blank">
+                                    <div class="company-logo-my">
+                                        <img src="/resources/images/yh/zq2.jpg" alt="Nexeon/Ultimus" />
+                                    </div>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="company-name">
+                        <div class="tit">Daishin Securities</div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="company company-my">
+                        <!-- 앞면(s) -->
+                        <div class="front">
+                            <button type="button" class="btn-fcompany">
+                                <a href="https://www.kbsec.com" target="_blank">
+                                    <div class="company-logo-my">
+                                        <img src="/resources/images/yh/zq3.png" alt="Momentive Performance Materials" />
+                                    </div>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="company-name">
+                        <div class="tit">KB Securities</div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="company company-my">
+                        <!-- 앞면(s) -->
+                        <div class="front">
+                            <button type="button" class="btn-fcompany">
+                                <a href="https://securities.koreainvestment.com" target="_blank">
+                                    <div class="company-logo-my">
+                                        <img src="/resources/images/yh/zq4.jpg" alt="Momentive Technologies" />
+                                    </div>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="company-name">
+                        <div class="tit">Korea Investment & Securities</div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="company company-my">
+                        <!-- 앞면(s) -->
+                        <div class="front">
+                            <button type="button" class="btn-fcompany">
+                                <a href="https://www.kiwoom.com" target="_blank">
+                                    <div class="company-logo-my">
+                                        <img src="/resources/images/yh/zq5.jpg" alt="Vigevano" />
+                                    </div>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="company-name">
+                        <div class="tit">Kiwoom Securities</div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="company company-my">
+                        <!-- 앞면(s) -->
+                        <div class="front">
+                            <button type="button" class="btn-fcompany">
+                                <a href="https://www.nhqv.com" target="_blank">
+                                    <div class="company-logo-my">
+                                        <img src="/resources/images/yh/zq6.png" alt="Celltrion Holdings" />
+                                    </div>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="company-name">
+                        <div class="tit">NH Investment & Securities</div>
+                    </div>
+                </li>
+
             </ul>
         </div>
     </section>
@@ -588,13 +771,13 @@
 
     <!-- Next Page(s) -->
     <section class="next-page">
-        <a href="./team.html">
+        <a href="./contacts.html">
             <h4 class="next-tit">
-                Team
+                Contacts
                 <div class="arrow"></div>
             </h4>
             <div class="bg">
-                <div class="img go-team"></div>
+                <div class="img go-contacts"></div>
             </div>
         </a>
     </section>
