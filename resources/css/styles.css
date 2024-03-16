@@ -908,6 +908,8 @@ legend, .blind { position: absolute; left: -9999px; top: 0; height: 0; font-size
 
 .sect-contacts .contact-info .cont-ico.phone { background-image: url("/resources/images/common/ico_phone.svg"); }
 
+.sect-contacts .contact-info .cont-ico.facebook { background-image: url("/resources/images/yh/fb.png"); }
+
 .sect-contacts .contact-info .cont-ico.fax { background-image: url("/resources/images/common/ico_fax.svg"); }
 
 .sect-contacts .contact-info .cont-ico.email { background-image: url("/resources/images/common/ico_email.svg"); }
